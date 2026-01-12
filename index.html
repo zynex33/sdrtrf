@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ağ Teknolojileri Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <h1>🌐 Ağ Teknolojileri Quiz</h1>
+            <p class="subtitle">Bilgisayar Ağları Bilgini Test Et!</p>
+        </header>
+
+        <main id="main-content">
+            <!-- Ana Sayfa -->
+            <section id="home-page" class="page active">
+                <div class="category-grid">
+                    <div class="category-card" data-category="temel">
+                        <div class="category-icon">🖥️</div>
+                        <h3>Temel Kavramlar</h3>
+                        <p>Ağ tanımları, MAC adresi</p>
+                        <span class="question-count">12 Soru</span>
+                    </div>
+                    <div class="category-card" data-category="topoloji">
+                        <div class="category-icon">🔗</div>
+                        <h3>Ağ Topolojileri</h3>
+                        <p>BUS, Ring, Yıldız, Mesh</p>
+                        <span class="question-count">12 Soru</span>
+                    </div>
+                    <div class="category-card" data-category="kablo">
+                        <div class="category-icon">🔌</div>
+                        <h3>Ağ Kabloları</h3>
+                        <p>UTP, STP, CAT kategorileri</p>
+                        <span class="question-count">12 Soru</span>
+                    </div>
+                    <div class="category-card" data-category="ieee">
+                        <div class="category-icon">📡</div>
+                        <h3>IEEE & Kablosuz</h3>
+                        <p>802.x standartları, WiFi</p>
+                        <span class="question-count">12 Soru</span>
+                    </div>
+                    <div class="category-card" data-category="cihaz">
+                        <div class="category-icon">🔧</div>
+                        <h3>Ağ Cihazları</h3>
+                        <p>Router, Switch, Hub, Repeater</p>
+                        <span class="question-count">12 Soru</span>
+                    </div>
+                    <div class="category-card" data-category="ip">
+                        <div class="category-icon">🌍</div>
+                        <h3>IP Adresleme</h3>
+                        <p>IPv4, Prefix, Suffix</p>
+                        <span class="question-count">12 Soru</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quiz Sayfası -->
+            <section id="quiz-page" class="page">
+                <div class="quiz-header">
+                    <button id="back-btn" class="back-btn">← Ana Sayfa</button>
+                    <div class="progress-info">
+                        <span id="current-question">1</span> / <span id="total-questions">12</span>
+                    </div>
+                    <div class="score-display">Puan: <span id="score">0</span></div>
+                </div>
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <div class="difficulty-badge" id="difficulty-badge">Kolay</div>
+                <div id="question-container" class="question-container">
+                    <h2 id="question-text"></h2>
+                    <div id="options-container" class="options-container"></div>
+                </div>
+                <div id="feedback-container" class="feedback-container hidden">
+                    <div id="feedback-text"></div>
+                    <button id="next-btn" class="next-btn">Sonraki Soru →</button>
+                </div>
+            </section>
+
+            <!-- Sonuç Sayfası -->
+            <section id="result-page" class="page">
+                <div class="result-card">
+                    <div id="result-icon" class="result-icon">🏆</div>
+                    <h2 id="result-title">Tebrikler!</h2>
+                    <div class="result-score">
+                        <span id="final-score">0</span> / <span id="max-score">12</span>
+                    </div>
+                    <p id="result-message"></p>
+                    <div class="result-buttons">
+                        <button id="retry-btn" class="btn-primary">Tekrar Dene</button>
+                        <button id="home-btn" class="btn-secondary">Ana Sayfa</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
